@@ -57,6 +57,7 @@
         <button type="button1" class="btn btn-secondary" onclick="printmessage1()"><img src="images/underwater.jpg" width="200" height="200"></button>
         <button type="button2" class="btn btn-secondary" onclick="printmessage2()"><img src="images/healthy.jpg" width="200" height="200"></button>
         <button type="button3" class="btn btn-secondary" onclick="printmessage3()"><img src="images/overwatered1.jpg" width="200" height="200"></button>
+        <br></br>
         <p id="advice"></p>
       </div>
     </div>
@@ -65,13 +66,13 @@
 
 <script>
   function printmessage1(){
-    document.getElementById("advice").innerHTML = "Underwatered";
+    document.getElementById("advice").innerHTML = "Your plant is underwatered.";
   }
   function printmessage2(){
-    document.getElementById("advice").innerHTML = "Healthy";
+    document.getElementById("advice").innerHTML = "Your plant is healthy!";
   }
   function printmessage3(){
-    document.getElementById("advice").innerHTML = "Overwatered";
+    document.getElementById("advice").innerHTML = "Your plant is overwatered.";
   }
 </script>
 
