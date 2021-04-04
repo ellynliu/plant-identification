@@ -21,3 +21,9 @@ body{
   align-content: left;
   padding: 5%;
 }
+#miniquiz {
+  text-align: center;
+}
+.container {
+  text-align: center;
+}

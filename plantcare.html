@@ -38,22 +38,85 @@
       </div>
     </nav>
 
-<!--TESTING MORE SPACE UNDER NAV BAR-->
+<!--MORE SPACE UNDER NAV BAR-->
 <br></br>
 
+<!--space-->
+<section id="miniquiz">
+  <div class="container">
+    <div class="row">
+        <h4>Watery doing wrong?</h4>
+        <p>Click the image that best represents your plant</p>
+</div>
+</div>
+</section>
 
 <!--mini quiz-->
 <section id="buttons">
 <div class="form-row text-center">
 <div class="col-12">
 
-  <button type="button" class="btn btn-secondary"><img src="images/underwater.jpg" width="200" height="200"></button>
-  <button type="button" class="btn btn-secondary"><img src="images/healthy.jpg" width="200" height="200"></button>
-  <button type="button" class="btn btn-secondary"><img src="images/overwatered1.jpg" width="200" height="200"></button>
-  </div>
-  </div>
 
+
+  <button type="button1" class="btn btn-secondary" onclick="printmessage1()"><img src="images/underwater.jpg" width="200" height="200"></button>
+  <button type="button2" class="btn btn-secondary" onclick="printmessage2()"><img src="images/healthy.jpg" width="200" height="200"></button>
+  <button type="button3" class="btn btn-secondary" onclick="printmessage3()"><img src="images/overwatered1.jpg" width="200" height="200"></button>
+  <p id="advice"></p>
+  </div>
+  </div>
 </section>
+</html>
+  <script>
+  /*  var b1 = false;
+    var b2 = false;
+    var b3 = false;
+    if (document.getElementById('button1').onclick = printmessage1()) {
+    console.log("button1 was clicked");
+      b1 = true;
+    }
+    if (document.getElementById('button2').onclick = printmessage2()) {
+    console.log("button2 was clicked");
+      b2 = true;
+    }
+    if (document.getElementById('button3').onclick = printmessage3()) {
+    console.log("button3 was clicked");
+      b3 = true;
+    }
+    //button1.addEventListener("click", printmessage(b1, b2, b3));
+*/
+    function printmessage1(){
+      document.getElementById("advice").innerHTML = "Underwatered";
+    }
+    function printmessage2(){
+      document.getElementById("advice").innerHTML = "Healthy";
+    }
+    function printmessage3(){
+      document.getElementById("advice").innerHTML = "Overwatered";
+    }
+/*
+    function printmessage(b1, b2, b3) {
+      //  event.preventDefault();
+        if (b1) {
+          //document.getElementById("text").innerHTML = "Underwatered";
+          console.log("b1 printmessage");
+          return true;
+        }
+        else if (b2) {
+          //  document.getElementById("text").innerHTML = "Healthy";
+          console.log("b2 printmessage");
+          return true;
+
+        }
+        else {
+          //document.getElementById("text").innerHTML = "Overwatered";
+          console.log("b3 printmessage");
+          return true;
+
+        }
+    }
+    */
+
+  </script>
 
 
 
