@@ -21,6 +21,7 @@ body{
   align-content: left;
   padding: 5%;
 }
+
 #miniquiz {
   text-align: center;
 }
@@ -32,7 +33,7 @@ body{
 }
 #lightspectrum
 .container{
-  padding:15%
+  padding:10%
 }
 .row
 
@@ -42,4 +43,13 @@ body{
 }
 .thead-dark{
   text-align: center;
+}
+#information1{
+  text-align: left;
+}
+.container{
+
+}
+.row{
+  text-align: left;
 }
