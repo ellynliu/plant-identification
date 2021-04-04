@@ -35,3 +35,11 @@ body{
   padding:15%
 }
 .row
+
+#idtable{
+  margin-left: 10;
+  margin-right: 10;
+}
+.thead-dark{
+  text-align: center;
+}

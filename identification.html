@@ -39,28 +39,30 @@
       </div>
     </nav>
   </section>
+<br></br>
+  <center><p>Upload an image of your plant and we'll identify it.</p></center>
 
-  <p>Upload an image of your plant and we'll identify it.</p>
-
-  <form>
+  <center><form>
     <input type="file" multiple />
     <button type="button" class="btn btn-secondary" id="clickbutton">Go!</button>
-  </form>
+  </form></center>
 
   <br></br>
-  <p>Please wait a moment, information will show up soon!</p>
-  <table class="table table-striped">
-    <tr class="bg-info">
+  <center><p>Please wait a moment, information will show up soon!</p></center>
+  <section id="idtable">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+    <tr>
         <th>Plant name</th>
         <th>Probability</th>
         <th>Similar image</th>
     </tr>
-
+  </thead>
     <tbody id="myTable">
 
     </tbody>
 </table>
-
+</section>
   <script type="text/javascript">
 
   var plantInfo;
