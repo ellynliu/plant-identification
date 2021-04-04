@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <head>
   <meta charset="UTF-8">
   <title>What the F*cculent</title>
@@ -38,18 +40,50 @@
     </nav>
   </section>
 
+  <p>Upload an image of your plant and we'll identify it.</p>
+
   <form>
     <input type="file" multiple />
-    <!-- <button type="button">OK</button> -->
-    <button id="clickbutton">Okay</button>
+    <button type="button" class="btn btn-secondary" id="clickbutton">Go!</button>
   </form>
 
+  <br></br>
+  <p>Please wait a moment, information will show up soon!</p>
+  <table class="table table-striped">
+    <tr class="bg-info">
+        <th>Plant name</th>
+        <th>Probability</th>
+        <th>Similar image</th>
+    </tr>
+
+    <tbody id="myTable">
+
+    </tbody>
+</table>
+
   <script type="text/javascript">
+
+  var plantInfo;
 
   document.getElementById("clickbutton").addEventListener("click", function(event){
     event.preventDefault();
     sendIdentification();
   });
+
+  function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+					<td>${data[i].plant_name}</td>
+					<td>${(data[i].probability).toFixed(3)}</td>
+					<td><img src = ${data[i].similar_images[0]["url"]} width="200" height="200"></td>
+			  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
 
   function sendIdentification() {
       const files = [...document.querySelector('input[type=file]').files];
@@ -91,6 +125,8 @@
         .then(response => response.json())
         .then(data => {
           console.log('Success:', data);
+          plantInfo = data["suggestions"];
+          buildTable(plantInfo);
         })
         .catch((error) => {
           console.error('Error:', error);
